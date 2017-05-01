@@ -8,7 +8,8 @@
     if(strlen($string1)>strlen($string2)){
         $largeString=$string1;
         $smallString=$string2;        
-    }esle{
+    }
+    else{
         $largeString=$string2;
         $smallString=$string1;
     }
