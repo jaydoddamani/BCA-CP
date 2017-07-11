@@ -1,0 +1,30 @@
+<<html>
+<head>
+<script language="javascript">
+	function func()
+	{
+		var n=parseInt(document.getElementById("text1").value);
+		var fact=[];
+		var cnt=0;
+		
+		for(i=1;i<=n/2;i++)
+		{
+			if(n%i == 0)
+			{
+				fact[cnt]=i;
+				cnt++;
+			}
+		}
+			
+		document.write("<br>" + "Factors of " + n + " is :" + "<br>" );
+		for(i=0;i<fact.length;i++)		
+			document.write("<br>" + fact[i]);
+	}
+</script>
+</head>
+<body>
+<input type="text" id="text1"/>
+<br>
+<button type="submit" onclick="func()">Submit</button>
+</body>
+</html>
