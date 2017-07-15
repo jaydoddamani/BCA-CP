@@ -1,5 +1,19 @@
 <html>
-<body>
+<head>
+    <script language="javascript">
+        function ValidatePAN(Obj){
+            if(Obj.value !=" "){
+                ObjVal=Obj.value;
+                var panPat=/^([a-zA-Z]{5})(\d{4})([a-zA-Z]{1})$/;
+            if (ObjVal.search(panPat)==-1){
+                alert("Invalid Pan no.");
+                Obj.focus();
+                return false;
+            }
+            }
+        }
+    </script>
+</head>
 <center><h1>Customer account Details</h1>
 <form>
     <table>
@@ -17,7 +31,7 @@
         </tr>
         <tr>
             <td>Pan Number:</td>
-            <td><input type="text"></input></td>
+            <td><input type="text" id="textPanNo" maxlength="10" onblur="ValidatePAN(this);"></input></td>
         </tr>
         <tr>
             <td><input type="submit"></input></td>
