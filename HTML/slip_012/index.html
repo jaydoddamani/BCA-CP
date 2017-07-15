@@ -1,19 +1,35 @@
 <html>
+<head>
+<script language="javascript">
+    function vali(){
+        var a=document.myform.text1.value;
+        var b=document.myform.p1.value;
+        var c=document.myform.p2.value;
+            if(a=="" | b=="" || c==""){
+                alert("Can't be empty");
+            }
+            if(b!==c){
+                alert("Password do not match");
+            }
+
+    }
+</script>
+</head>
 <body>
 <center><h1>User Login</h1>
-<form>
+<form name="myform" onsubmit="vali()">
     <table>
         <tr>
             <td>User Name:</td>
-            <td><input type="text"></input></td>
+            <td><input type="text" name="text1"></input></td>
         </tr>
         <tr>
             <td>Password:</td>
-            <td><input type="text"></input></td>
+            <td><input type="password" name="p1"></input></td>
         </tr>
         <tr>
             <td>Confirmed Password:</td>
-            <td><input type="text"></input></td>
+            <td><input type="password" name="p2"></input></td>
         </tr>
         <tr>
             <td><input type="submit"></input></td>
