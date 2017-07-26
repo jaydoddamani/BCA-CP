@@ -1,32 +1,59 @@
 <html>
+<head>
+<script language="JavaScript">
+	function val(){
+		var nm=document.getElementById("t1").value;
+		var mob=document.getElementById("t2").value;
+		var add=document.getElementById("t3").value;
+		var city=document.getElementById("t4").value;
+		var sta=document.getElementById("t5").value;
+		var pin=document.getElementById("t6").value;
+		if(nm==null || nm=="")
+			alert("Name should not be null");
+		if(mob==null || mob=="")
+			alert("Mobile Should not be null");
+		if(add==null || add=="")
+			alert("Address should not be null");
+		if(city==null || city=="")
+			alert("City should not be null");
+		if(pin==null || pin=="")
+			alert("Pin should not be null");
+		if(!isNaN(nm))
+			alert("Alphabets only");
+		if(mob.length!=10)
+			alert("Mob no should only be of 10dig");
+		if(pin.length!=6)
+			alert("PIN should be of 6dig");
+	}
+</script>
+</head>
 <body>
-<h4>-Pin code field shouls be of 06 digits.</h4>
-<center>
-<h1>Student Registration form</h1>
-<frame>
+<form>
+<caption>Student Registration Form</caption>
 	<table>
 		<tr>
-		  <td>Name of student:</td><td><input type=text name="name"/></td>
+		  <td>Name of student:</td>
+			<td><input type=text name="name" id="t1"/></td>
 		</tr>
 		<tr>
-		  <td>Mobile no:</td><td><input type=text name="mob"/></td>
+		  <td>Mobile no:</td><td><input type=text name="mob" id="t2"/></td>
 		</tr>
 		<tr>
-		  <td>address list:</td><td><input type=text name="addr"/></td>
+		  <td>address list:</td><td><input type=text name="addr" id="t3"/></td>
 		</tr>
 		<tr>
-		  <td>City:</td><td><input type=text name="city"/></td>
+		  <td>City:</td><td><input type=text name="city" id="t4"/></td>
 		</tr>
 		<tr>
-		  <td>State:</td><td><input type=text name="state"/></td>
+		  <td>State:</td><td><input type=text name="state" id="t5"/></td>
 		</tr>
 		<tr>
-		  <td>Pincode:</td><td><input type=text name="pin"/></td>
+		  <td>Pincode:</td><td><input type=text name="pin" id="t6"/></td>
 		</tr>
 		<tr>
-		  <td><input type=submit name="submit"/></td><td><input type=reset name"reset"/></td>
+		  <td><input type=submit name="submit" onclick="val()"/></td><td><input type="reset" name="reset"/></td>
 		</tr>
 	</table>
-</frame>
+</form>
 </body>
 </html>
