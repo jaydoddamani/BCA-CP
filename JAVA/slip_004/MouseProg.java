@@ -3,8 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 class MouseProg extends Frame{
     TextField statusBar;
-    MouseProg()
-    {
+    MouseProg(){
         statusBar = new TextField(20);
         add(statusBar);
         setLayout(new FlowLayout());
