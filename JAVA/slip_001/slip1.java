@@ -4,7 +4,19 @@ class slip1{
         FileReader f=new FileReader("f1.txt");
         int i;
         while((i=f.read())!=-1){
-            System.out.println((char)i);
+            char ch=(char)i;
+            if(Character.isUpperCase(ch)){
+                System.out.print(Character.toLowerCase(ch));
+            }
+            if(Character.isLowerCase(ch)){
+                System.out.print(Character.toUpperCase(ch));
+            }
+            if(Character.isDigit(ch)){
+                System.out.print(ch);
+            }
+            if(Character.isSpace(ch)){
+                System.out.print(" ");
+            }
         }
         f.close();
     }
