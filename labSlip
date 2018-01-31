@@ -1,0 +1,44 @@
+<?php
+class Employee{
+  public $eid, $ename, $edesg;
+  function __CONSTRUCT($a,$b,$c){
+    $this->eid=$a;
+    $this->ename=$b;
+    $this->edesg=$c;
+   }
+   public function getdata(){
+    return $this->sal;
+   }
+   public function display(){
+    echo $this->eid "<br>";
+    echo $this->ename "<br>";
+    echo $this->edesg "<br>";
+    //echo $this-.ename. "<br>";
+   }
+  }
+  
+class Emp_account extends Employee{
+  public $ac_no,$jdate;
+  public static $total1=0;
+  function __construct($a,$b,$c,$d,$e){
+    parent::__construct($a,$b,$c)
+    $this->ac_no=$d;
+    $this->jdate=$e;
+   }
+}
+class Emp_sal extends Emp_account{
+  public $b_pay,$er,$dud;
+  //public static $total1=0;
+  function __construct($a,$b,$c,$d,$e,$f,$g,$h){
+    parent::__construct($a,$b,$c,$d,$e);
+    $this->b_pay=$f;
+    $this->er=$g;
+    $this->dud=$h;
+  }
+ public function max($ob){
+ $total=$this->getdata();
+ $total=$this->b_pay+$this->er;
+ $total=$total-$this->dud;
+ if($total>self::$total1){
+  self::}
+ }}
